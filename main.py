@@ -7,7 +7,7 @@ from aiogram.filters import Command
 from aiogram.fsm.state import State, StatesGroup
 from aiogram.fsm.context import FSMContext
 from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery
-from aiohttp import web # <--- ВОТ ЭТОЙ БИБЛИОТЕКИ У ТЕБЯ НЕ ХВАТАЕТ
+from aiohttp import web  # <--- ВОТ ЭТА БИБЛИОТЕКА СПАСЕТ БОТА
 import google.generativeai as genai
 
 # --- НАСТРОЙКИ ---
@@ -18,7 +18,7 @@ GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
 genai.configure(api_key=GEMINI_API_KEY)
 model = genai.GenerativeModel('gemini-3-flash-preview')
 
-# --- БАЗА КАРТ (ПОЛНАЯ) ---
+# --- БАЗА КАРТ ---
 TAROT_DATA = {
     "Шут (The Fool)": "https://upload.wikimedia.org/wikipedia/commons/9/90/RWS_Tarot_00_Fool.jpg",
     "Маг (The Magician)": "https://upload.wikimedia.org/wikipedia/commons/d/de/RWS_Tarot_01_Magician.jpg",
